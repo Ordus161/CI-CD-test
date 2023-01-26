@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4626563-6339-43ce-8ba7-aeff6496407e" name="Changes" comment="pom maven fixes">
+    <list default="true" id="e4626563-6339-43ce-8ba7-aeff6496407e" name="Changes" comment="DAO for users added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/controllers/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/controllers/SecondController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello_world.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springMvcApp/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,17 +65,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Development_practice/Java/spring-mvc-app/src/main/webapp/WEB-INF/views/first",
+    "last_opened_file_path": "D:/Development_practice/Java/spring-mvc-app/src/main/webapp/WEB-INF/views/users",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "spring.configuration.checksum": "3282129d7582dc9b340640dd5135b5bf"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development_practice\Java\spring-mvc-app\src\main\webapp\WEB-INF\views\users" />
+      <recent name="D:\Development_practice\Java\spring-mvc-app\src\main\webapp\WEB-INF\views\second" />
       <recent name="D:\Development_practice\Java\spring-mvc-app\src\main\webapp\WEB-INF\views\first" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -190,6 +199,7 @@
       <workItem from="1674209375178" duration="775000" />
       <workItem from="1674210175222" duration="47000" />
       <workItem from="1674210233661" duration="8270000" />
+      <workItem from="1674554450431" duration="13501000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674024357933</created>
@@ -205,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674474745858</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new pages and controllers added">
+      <created>1674478915499</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674478915499</updated>
+    </task>
+    <task id="LOCAL-00004" summary="DAO for users added">
+      <created>1674484102433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674484102433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +249,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="pom maven fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom maven fixes" />
+    <MESSAGE value="new pages and controllers added" />
+    <MESSAGE value="DAO for users added" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO for users added" />
   </component>
 </project>
