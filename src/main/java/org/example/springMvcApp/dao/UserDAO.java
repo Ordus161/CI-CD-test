@@ -37,10 +37,12 @@ public class UserDAO {
             String SQL = "SELECT * FROM public.user";
             ResultSet resultSet = statement.executeQuery(SQL);
 
+            User user = null;
             while (resultSet.next()){
-                User user = new User(
-                resultSet.getInt("id"),
-                resultSet.getString("name"));
+                user = new User();
+                user.setId(resultSet.getInt("id"));
+                user.setName(resultSet.getString("name"));
+                user.setRole(resultSet.getString("role"));
 
                 users.add(user);
             }
@@ -64,10 +66,10 @@ public class UserDAO {
 
             resultSet.next();
 
-            user = new User(
-            resultSet.getInt("id"),
-            resultSet.getString("name")
-            );
+            user = new User();
+            user.setId(resultSet.getInt("id"));
+            user.setName(resultSet.getString("name"));
+            user.setRole(resultSet.getString("role"));
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -79,9 +81,10 @@ public class UserDAO {
     public void save(User user) {
         try {
             PreparedStatement preparedStatement =
-                    connection.prepareStatement("INSERT INTO public.user VALUES(?, ?)");
+                    connection.prepareStatement("INSERT INTO public.user VALUES(?, ?, ?)");
             preparedStatement.setInt(1, USERS_COUNT++);
             preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getRole());
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

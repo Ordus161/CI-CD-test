@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>800</IntrospectionStateNumber>
+      <IntrospectionStateNumber>839</IntrospectionStateNumber>
       <ServerVersion>14.2</ServerVersion>
-      <StartupTime>1674471070</StartupTime>
+      <StartupTime>1675033058</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -800,7 +800,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>800</IntrospectionStateNumber>
+      <IntrospectionStateNumber>839</IntrospectionStateNumber>
       <ObjectId>16465</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4234,27 +4234,33 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>800</IntrospectionStateNumber>
+      <IntrospectionStateNumber>839</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <table id="265" parent="264" name="user">
-      <ObjectId>16471</ObjectId>
-      <StateNumber>799</StateNumber>
+      <ObjectId>16476</ObjectId>
+      <StateNumber>838</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="266" parent="265" name="id">
       <DataType>integer|0s</DataType>
       <Position>1</Position>
-      <StateNumber>799</StateNumber>
+      <StateNumber>838</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="267" parent="265" name="name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
-      <StateNumber>799</StateNumber>
+      <StateNumber>838</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="268" parent="265" name="role">
+      <DataType>varchar|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>838</StateNumber>
       <TypeId>1043</TypeId>
     </column>
   </database-model>

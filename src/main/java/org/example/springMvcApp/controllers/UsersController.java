@@ -1,11 +1,17 @@
 package org.example.springMvcApp.controllers;
 
+import UsersFactory.UsersFactory;
 import org.example.springMvcApp.dao.UserDAO;
+import org.example.springMvcApp.models.Admin;
+import org.example.springMvcApp.models.Moderator;
 import org.example.springMvcApp.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import static org.example.springMvcApp.models.UserType.ADMIN;
+import static org.example.springMvcApp.models.UserType.MODERATOR;
 
 
 @Controller
@@ -40,6 +46,40 @@ public class UsersController {
     @PostMapping()
     public String create(@ModelAttribute("user") User user) {
        userDAO.save(user);
+        return "redirect:/users";
+    }
+
+    @GetMapping("/admin")
+    public String newAdminUser(Model model) {
+        try {
+            model.addAttribute("user", UsersFactory.createUser(ADMIN));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return "users/new_admin";
+    }
+
+    @RequestMapping("/admin")
+    @PostMapping()
+    public String createAdmin(@ModelAttribute("user")Admin admin) {
+        userDAO.save(admin);
+        return "redirect:/users";
+    }
+
+    @GetMapping("/moderator")
+    public String newModeratorUser(Model model) {
+        try {
+            model.addAttribute("user", UsersFactory.createUser(MODERATOR));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return "users/new_moderator";
+    }
+
+    @RequestMapping("/moderator")
+    @PostMapping()
+    public String createModerator(@ModelAttribute("user") Moderator moderator) {
+        userDAO.save(moderator);
         return "redirect:/users";
     }
 }
